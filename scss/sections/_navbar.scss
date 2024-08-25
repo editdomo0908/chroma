@@ -1,0 +1,23 @@
+@use '../custom' as *;
+@use'../components/mixins' as *;
+
+.menu {
+    @include gradient; // gradient at mixins
+}
+
+
+li {
+    font-family: 'Jost', sans-serif;
+    padding: 0 0.7rem;
+
+    a{
+        color:$white !important;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+}
+
+img {
+    max-width: 6rem;
+    font-weight: 900;
+}

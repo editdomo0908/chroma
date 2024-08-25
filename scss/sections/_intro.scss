@@ -1,0 +1,98 @@
+@use '../custom' as *;
+@use'../components/mixins' as *;
+
+
+.intro-section {
+    @include gradient;
+    padding: 10rem 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.introstext {
+    margin-left: 100px;
+}
+
+
+
+
+.intros {
+    .video-box {
+     position: relative;
+
+        a {
+
+            @include absolute-center;
+             position: absolute;
+
+            span{
+                i {
+                   font-size: 6rem;
+                   color: $primary;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+.border-animation {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 6rem;
+    height: 6rem;
+    border:0.5rem solid $primary;
+    border-radius: 50%;
+    animation: pulse-border 1.5s linear infinite;
+
+    &--border-1 {
+        animation-delay: 1s;
+       
+    }
+    &--border-2 {
+        animation-delay: 1.5s;
+        
+    }
+}
+
+
+.gradient-circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    @include gradient-initial(#7089bc, #c67c78, #ad689b); 
+    top: 50px;
+    left:100px;
+    margin: 2rem;
+ 
+    transition: width 0.2s, height 0.2s, top 0.2s; 
+ 
+   
+
+/* Media query for smaller screens */
+    @media only screen and (max-width: 800px) {
+      
+          width: 100px;
+          height: 100px;
+          background-color: plum;
+          transition: 0.5s ease-in-out, transform 1s ease-in-out;
+          animation: floatAnimation 3s ease-in-out;
+          
+        
+      }
+    
+}
+
+
+
+
+//GRADIENT BACKGROUND CLASS
+.gradient-bg {
+    background-color: grey;
+}
+
