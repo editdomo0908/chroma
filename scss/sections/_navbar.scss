@@ -3,21 +3,17 @@
 
 .menu {
     @include gradient; // gradient at mixins
+    z-index: 3;
 }
 
 
 li {
     font-family: 'Jost', sans-serif;
-    padding: 0 0.7rem;
+    padding: 0.7rem;
 
     a{
-        color:$white !important;
+        color:rgb(236, 236, 236) !important;
         text-transform: capitalize;
         font-weight: 600;
     }
-}
-
-img {
-    max-width: 6rem;
-    font-weight: 900;
 }

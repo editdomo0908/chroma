@@ -2,8 +2,9 @@
 @use'../components/mixins' as *;
 
 
+
 .feedback {
-    background-color: $secondary;
+  background-color: #7089bc;
 
     &__card{
         background-color: $gray-200;
@@ -12,11 +13,12 @@
         height: auto;
         margin: 2rem;
         text-align: center;
+        @include gradient-initial(#7089bc, #c67c78, #ad689b); 
 
 
         i{
             font: size 1.5rem;
-            color: $primary;
+            color: black;
         }
     }
 
@@ -28,7 +30,7 @@
         transform: translate(-50%, -50%);
         
         img {
-            border:0.325rem solid $primary;
+            border:0.325rem solid black;
         }
     }
 
@@ -42,8 +44,13 @@
     }
 
     &__right {
-        color: $primary;
+        color: black;
     }
 
 }
 
+
+.card-img-comp {
+width: 100%;
+height: 100%;
+}
